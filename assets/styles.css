@@ -1,0 +1,278 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    background: #f2f2f2;
+}
+
+/*========== FORM BOX ==========*/
+
+.container
+{
+    background: white;
+    width: 700px;
+    padding: 25px;
+    margin: 30px auto 30px;
+    border-top: 9px solid lightgreen;
+    box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding: 30px;
+    text-align: center;
+}
+
+.input-name
+{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+
+/*========== FIRST & LAST NAME ==========*/
+.name
+{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+    border: 1px solid #cccccc;
+    outline: none;
+}
+.name:focus
+{
+    border: 3px solid lightgreen;
+}
+
+/*========== DOB ==========*/
+.date
+{
+    width: 28.2%;
+    padding: 8px 0 8px 40px;
+    border: 1px solid #cccccc;
+    outline: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    appearance: none;
+}
+.date:focus
+{
+    border: 3px solid lightgreen;
+}
+
+.month
+{
+    width: 28.2%;
+    padding: 8px 0 8px 40px;
+    border: 1px solid #cccccc;
+    outline: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    appearance: none;
+}
+.month:focus
+{
+    border: 3px solid lightgreen;
+}
+
+.year
+{
+    width: 28.2%;
+    padding: 8px 0 8px 40px;
+    border: 1px solid #cccccc;
+    outline: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    appearance: none;
+}
+.year:focus
+{
+    border: 3px solid lightgreen;
+}
+
+.year-arrow
+{
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: lightgreen transparent transparent transparent;
+}
+
+.day-arrow
+{
+    position: absolute;
+    top: calc(50% - 4px);
+    left: 227px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: lightgreen transparent transparent transparent;
+}
+
+.month-arrow
+{
+    position: absolute;
+    top: calc(50% - 4px);
+    left: 395px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: lightgreen transparent transparent transparent;
+}
+
+/*========== GENDER ==========*/
+.gender-box
+{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+    border: 1px solid #cccccc;
+    outline: none;
+    appearance: none;
+}
+.gender-box:focus
+{
+    border: 3px solid lightgreen;
+}
+
+.arrow
+{
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: lightgreen transparent transparent transparent;
+}
+
+/*========== CHECK BOX ==========*/
+.check
+{
+    margin-right: 15px;
+    position: relative;
+}
+
+.check::before
+{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    border: 2px solid #cccccc;
+    padding: 2.5px;
+    background-color: transparent;
+    background-clip: content-box;
+}
+
+.check::after
+{
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    content: "";
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 7px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    width: 7px;
+    display: none;
+}
+
+.check-button
+{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.check-button:hover +.check::before
+{
+    border-color: black;
+}
+.check-button:checked +.check::before
+{
+    border-color: rgb(180, 13, 252);
+}
+.check-button:checked +.check::after
+{
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: rgb(180, 13, 252);
+}
+
+@-webkit-keyframes check
+{
+    0%{height: 0; width: 0;}
+    25%{height: 0; width: 7px;}
+    50%{height: 20px; width: 7px;}
+}
+
+/*========== SUBMIT BUTTON ==========*/
+.button
+{
+    background-color: rgb(29, 248, 138);
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.button:hover
+{
+    background: rgb(180, 13, 252);
+}
+
+/*========== HEADER ==========*/
+.nav__icon
+{
+    font-size: 8rem;
+    margin: 0px 569px 0px;
+    color: rgb(249, 140, 15);
+    cursor: pointer;
+}
+.nav
+{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(249, 140, 15);
+    cursor: pointer;
+}
+
+/*========== FORM IMG ==========*/
+img
+{
+    width: 50%;
+    margin: 0px 150px 0px;
+}
+
